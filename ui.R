@@ -6,7 +6,7 @@ library(stringr)
 library(tidyverse)
 library(leaflet)
 library(jsonlite)
-library(geojsonio)
+
 library(rgdal)
 library(maps)
 library(sp)
@@ -18,6 +18,7 @@ library(lubridate)
 library(shinyLP)
 library(DT)
 library(highcharter)
+library(udunits2)
 
 
 dt <- fread("countries.csv", encoding = "UTF-8")
