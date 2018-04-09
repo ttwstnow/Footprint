@@ -8,4 +8,5 @@ library(shinydashboard); library(shiny); library(data.table); library(dplyr); li
 "runGitHub("Footprint", "ttwstnow")"
 
 Regards,
+
 Fanny, Habiba & Walid
