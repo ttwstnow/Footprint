@@ -416,11 +416,11 @@ server <- function(input, output, session) {
   
   #Logistic regression
   output$other_val_show2<-renderPrint({
-    input$x_variables
-    input$y_variable
+    input$x_variables2
+    input$y_variable2
     countries<-data
     
-    form <- sprintf("%s~%s", input$y_variable, paste0(input$x_variables, collapse="+"))
+    form <- sprintf("%s~%s", input$y_variable2, paste0(input$x_variables2, collapse="+"))
     print(form)
     
     
@@ -433,11 +433,11 @@ server <- function(input, output, session) {
   
   #Multinomial regression
   output$other_val_show3<-renderPrint({
-    input$x_variables
-    input$y_variable
+    input$x_variables3
+    input$y_variable3
     countries<-data
     
-    form <- sprintf("%s~%s", input$y_variable, paste0(input$x_variables, collapse="+"))
+    form <- sprintf("%s~%s", input$y_variable3, paste0(input$x_variables3, collapse="+"))
     print(form)
     
     multinomodel <- multinom(as.formula(form),

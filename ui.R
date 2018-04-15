@@ -96,9 +96,9 @@ body <- dashboardBody(
             fluidRow(column(width=12,
                             box(verbatimTextOutput("other_val_show2"), height =500, status = "success",title="Logistic regression output")),
                      column(width=8,
-                            box(selectInput("modelselect","Select the model of your choice",choices = c("Binary model"="logreg")),
-                                selectInput("y_variable","Select your independent variable", selected = "Biocap.Deficit.or.Reserve", choices =cnames, multiple = FALSE),
-                                checkboxGroupInput("x_variables","Select explanatory.ies variable.s",choices =cnames),
+                            box(selectInput("modelselect2","Select the model of your choice",choices = c("Binary model"="logreg")),
+                                selectInput("y_variable2","Select your independent variable", selected = "Biocap.Deficit.or.Reserve", choices =cnames, multiple = FALSE),
+                                checkboxGroupInput("x_variables2","Select explanatory.ies variable.s",choices =cnames),
                                 status = "success",title="Select Inputs")))),
     
     
@@ -106,17 +106,13 @@ body <- dashboardBody(
             fluidRow(column(width=12,
                             box(verbatimTextOutput("other_val_show3"), height =500, status = "success",title="Multinomial regression output")),
                      column(width=8,
-                            box(selectInput("modelselect","Select the model of your choice",choices = c("Multinomial model"="multinomodel")),
-                                selectInput("y_variable","Select your independent variable", choices =cnames, multiple = FALSE),
-                                checkboxGroupInput("x_variables","Select explanatory.ies variable.s",choices =cnames),
+                            box(selectInput("modelselect3","Select the model of your choice",choices = c("Multinomial model"="multinomodel")),
+                                selectInput("y_variable3","Select your independent variable", choices =cnames, multiple = FALSE),
+                                checkboxGroupInput("x_variables3","Select explanatory.ies variable.s",choices =cnames),
                                 status = "success",title="Select Inputs"))))
     
     
-    
-    
   ))
-
-
 
 
 
