@@ -1,3 +1,5 @@
+data <- read.table(file = "data.csv", sep = ' ', header = TRUE)
+cnames <- names(data)
 
 
 #######################################################################################################################
@@ -86,8 +88,8 @@ body <- dashboardBody(
                             box(verbatimTextOutput("other_val_show"), height =500, status = "success",title="Linear Regression output")),
                      column(width=8,
                             box(selectInput("modelselect",NULL,choices = c("LM regression"="lin_model")),
-                                selectInput("y_variable","Select your independent variable", selected = "Biocapacity.Deficit.or.Reserve", choices =as.list(names(data)), multiple = FALSE),
-                                checkboxGroupInput("x_variables","Select explanatory.ies variable.s",choices =as.list(names(data))),
+                                selectInput("y_variable","Select your independent variable", selected = "Biocapacity.Deficit.or.Reserve", choices =cnames, multiple = FALSE),
+                                checkboxGroupInput("x_variables","Select explanatory.ies variable.s",choices =cnames),
                                 status = "success",title="Select Inputs")))),
     
     tabItem(tabName = "reg2",
@@ -95,8 +97,8 @@ body <- dashboardBody(
                             box(verbatimTextOutput("other_val_show2"), height =500, status = "success",title="Logistic regression output")),
                      column(width=8,
                             box(selectInput("modelselect","Select the model of your choice",choices = c("Binary model"="logreg")),
-                                selectInput("y_variable","Select your independent variable", selected = "Biocap.Deficit.or.Reserve", choices =as.list(names(data)), multiple = FALSE),
-                                checkboxGroupInput("x_variables","Select explanatory.ies variable.s",choices =as.list(names(data))),
+                                selectInput("y_variable","Select your independent variable", selected = "Biocap.Deficit.or.Reserve", choices =cnames, multiple = FALSE),
+                                checkboxGroupInput("x_variables","Select explanatory.ies variable.s",choices =cnames),
                                 status = "success",title="Select Inputs")))),
     
     
@@ -105,8 +107,8 @@ body <- dashboardBody(
                             box(verbatimTextOutput("other_val_show3"), height =500, status = "success",title="Multinomial regression output")),
                      column(width=8,
                             box(selectInput("modelselect","Select the model of your choice",choices = c("Multinomial model"="multinomodel")),
-                                selectInput("y_variable","Select your independent variable", choices =as.list(names(data)), multiple = FALSE),
-                                checkboxGroupInput("x_variables","Select explanatory.ies variable.s",choices =as.list(names(data))),
+                                selectInput("y_variable","Select your independent variable", choices =cnames, multiple = FALSE),
+                                checkboxGroupInput("x_variables","Select explanatory.ies variable.s",choices =cnames),
                                 status = "success",title="Select Inputs"))))
     
     

@@ -24,8 +24,6 @@ library(highcharter)
 library(VIM)
 library(ggplot2)
 library(nnet)
-
-
 #install.packages("udunits2")
 
 #Load data
@@ -210,7 +208,8 @@ labels2 <- sprintf(
 
 #loading data for modelling
 
-data <- read.table(file = "data.csv", sep = ' ', header = TRUE)
+#data <- read.table(file = "data.csv", sep = ' ', header = TRUE)
+#cnames <- names(data)
 
 #######################################################################################################################
 ###############################################    server    ##########################################################
