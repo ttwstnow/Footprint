@@ -1,0 +1,32 @@
+# Footprint
+
+This shiny application requires loading and installing the following packages :
+
+library(data.table)
+library(dplyr)
+library(ggplot2)
+library(plyr)
+library(rgdal)
+library(sp)
+library(leaflet)
+library(shiny)
+library(shinydashboard)
+library(stringr)
+library(jsonlite)
+library(geojsonio)
+library(rgdal)
+library(maps)
+library(maptools)
+library(forcats)
+library(FactoMineR)
+library(htmlwidgets)
+library(lubridate)
+library(shinyLP)
+library(DT)
+library(highcharter)
+library(VIM)
+library(ggplot2)
+library(nnet)
+#install.packages("udunits2")
+
+To launch the application : runGitHub("Footprint", "ttwstnow")
