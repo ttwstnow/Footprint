@@ -208,8 +208,8 @@ labels2 <- sprintf(
 
 #loading data for modelling
 
-#data <- read.table(file = "data.csv", sep = ' ', header = TRUE)
-#cnames <- names(data)
+dat <- read.table(file = "data.csv", sep = ' ', header = TRUE)
+
 
 #######################################################################################################################
 ###############################################    server    ##########################################################
@@ -403,7 +403,7 @@ server <- function(input, output, session) {
   output$other_val_show<-renderPrint({
     input$x_variables
     input$y_variable
-    countries<-data
+    countries <- as.data.frame(dat)
     
     form <- sprintf("%s~%s", input$y_variable, paste0(input$x_variables, collapse="+"))
     print(form)
@@ -418,7 +418,7 @@ server <- function(input, output, session) {
   output$other_val_show2<-renderPrint({
     input$x_variables2
     input$y_variable2
-    countries<-data
+    countries <- as.data.frame(dat)
     
     form <- sprintf("%s~%s", input$y_variable2, paste0(input$x_variables2, collapse="+"))
     print(form)
@@ -435,7 +435,7 @@ server <- function(input, output, session) {
   output$other_val_show3<-renderPrint({
     input$x_variables3
     input$y_variable3
-    countries<-data
+    countries <- as.data.frame(dat)
     
     form <- sprintf("%s~%s", input$y_variable3, paste0(input$x_variables3, collapse="+"))
     print(form)

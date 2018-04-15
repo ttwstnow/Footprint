@@ -1,5 +1,5 @@
-data <- read.table(file = "data.csv", sep = ' ', header = TRUE)
-cnames <- names(data)
+dt <- read.table(file = "data.csv", sep = ' ', header = TRUE)
+cnames <- names(dt)
 
 
 #######################################################################################################################
